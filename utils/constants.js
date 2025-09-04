@@ -2,18 +2,18 @@ export const initialTodos = [
   {
     id: "1",
     name: "Buy groceries",
-    dueDate: "2025-09-01"
+    dueDate: "2025-09-01",
   },
   {
     id: "2",
     name: "Finish project",
-    dueDate: "2025-09-03"
+    dueDate: "2025-09-03",
   },
   {
     id: "3",
     name: "Call mom",
-    dueDate: "2025-09-04"
-  }
+    dueDate: "2025-09-04",
+  },
 ];
 
 export const validationConfig = {

@@ -5,18 +5,24 @@ export default class FormValidator {
     this._inputList = Array.from(
       formElement.querySelectorAll(config.inputSelector)
     );
-    this._buttonElement = formElement.querySelector(config.submitButtonSelector);
+    this._buttonElement = formElement.querySelector(
+      config.submitButtonSelector
+    );
   }
 
   _showInputError(inputElement, errorMessage) {
-    const errorElement = this._formElement.querySelector(`#${inputElement.id}-error`);
+    const errorElement = this._formElement.querySelector(
+      `#${inputElement.id}-error`
+    );
     inputElement.classList.add(this._config.inputErrorClass);
     errorElement.textContent = errorMessage;
     errorElement.classList.add(this._config.errorClass);
   }
 
   _hideInputError(inputElement) {
-    const errorElement = this._formElement.querySelector(`#${inputElement.id}-error`);
+    const errorElement = this._formElement.querySelector(
+      `#${inputElement.id}-error`
+    );
     inputElement.classList.remove(this._config.inputErrorClass);
     errorElement.textContent = "";
     errorElement.classList.remove(this._config.errorClass);
@@ -31,7 +37,7 @@ export default class FormValidator {
   }
 
   _hasInvalidInput() {
-    return this._inputList.some(input => !input.validity.valid);
+    return this._inputList.some((input) => !input.validity.valid);
   }
 
   _toggleButtonState() {

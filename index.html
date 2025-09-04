@@ -1,12 +1,94 @@
-<template id="todo-template">
-  <li class="todo">
-    <input type="checkbox" class="todo__checkbox" />
-    <label class="todo__label">
-      <span class="todo__title"></span>
-      <span class="todo__date"></span>
-    </label>
-    <button class="todo__delete" type="button">Delete</button>
-  </li>
-</template>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>My To-Do App</h1>
+      <button class="open-popup-button">Add Task</button>
+    </header>
 
-<script type="module" src="./pages/index.js"></script>
+    <main>
+      <ul class="todo-list"></ul>
+    </main>
+
+    <div class="modal">
+      <form class="form" name="todo-form" novalidate>
+        <h2>Add a New Task</h2>
+
+        <label for="todo-title">Task</label>
+        <input
+          type="text"
+          id="todo-title"
+          name="name"
+          class="form__input modal__input"
+          required
+          minlength="1"
+          maxlength="100"
+          placeholder="What needs to be done?"
+        />
+        <span class="modal__error" id="todo-title-error"></span>
+
+        <label for="todo-due">Due Date</label>
+        <input
+          type="date"
+          id="todo-due"
+          name="dueDate"
+          class="form__input modal__input"
+        />
+        <span class="modal__error" id="todo-due-error"></span>
+
+        <button type="submit" class="form__submit modal__submit-btn">
+          Add Task
+        </button>
+        <button type="button" class="form__close modal__close-btn">
+          Close
+        </button>
+      </form>
+    </div>
+
+    <template id="todo-template">
+      <li class="todo-item">
+        <label>
+          <input type="checkbox" class="todo-checkbox" />
+          <span class="todo-text"></span>
+        </label>
+        <span class="todo-date"></span>
+        <button class="todo-delete">Delete</button>
+      </li>
+    </template>
+    <div class="page">
+      <header class="header">
+        <h1 class="header__title">My To-Do List</h1>
+        <button class="button open-popup-button">Add Task</button>
+      </header>
+
+      <main>
+        <ul class="todo-list"></ul>
+      </main>
+
+      <div class="modal">
+        <form class="form" name="todo-form">
+          <h2 class="form__title">New Task</h2>
+          <input
+            type="text"
+            name="name"
+            class="form__input"
+            placeholder="What needs to be done?"
+            required
+            minlength="1"
+            maxlength="100"
+          />
+          <span class="modal__error" id="name-error"></span>
+          <button type="submit" class="form__submit">Add</button>
+          <button type="button" class="form__close">Close</button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="./pages/index.js"></script>
+  </body>
+</html>

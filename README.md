@@ -14,6 +14,7 @@ This webpage is deployed to GitHub Pages
 
 Deployment Link:
 
- https://github.com/niyvo10/se_project_todo-app
+ Live Site:  https://github.com/niyvo10/se_project_todo-app.git
+GitHub Repo: https://github.com/niyvo10/se_project_todo-app
 
  
